@@ -45,7 +45,7 @@ inactive = 'VectorPostprocessors'
     variable = C_d
   []
   [C_d_precipitation_and_redissolution]
-    type = ADPrecipitationAndRedissolution
+    type = PrecipitationAndRedissolution
     coupled_var_precipitation = 'C_p'
     solubility = solubility_solid
     variable = C_d
@@ -55,7 +55,7 @@ inactive = 'VectorPostprocessors'
     variable = C_p
   []
   [C_p_precipitation_and_redissolution]
-    type = ADPrecipitationAndRedissolution
+    type = PrecipitationAndRedissolution
     solubility = solubility_solid
     coupled_var_dissolution = 'C_d'
     variable = C_p
@@ -198,4 +198,11 @@ inactive = 'VectorPostprocessors'
   [CenterlineFinalValue]
     type = CSV
   []
+[]
+
+[Preconditioning]
+  [./smp]
+    type = SMP
+    full = true
+  [../]
 []
