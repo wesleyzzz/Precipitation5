@@ -104,7 +104,7 @@ PrecipitationAndRedissolution::computeQpJacobian()
       jac = prefactor * (_coupled_variable[_qp] - _solubility[_qp]) * _phi[_j][_qp];
   }
 
-  return -_test[_i][_qp] * jac;//-sign creat bad jac
+  return _test[_i][_qp] * jac;
 }
 
 
@@ -134,7 +134,7 @@ PrecipitationAndRedissolution::computeQpOffDiagJacobian(unsigned int jvar)
       offjac = prefactor * _phi[_j][_qp]* _u[_qp];
   }
 
-  return -_test[_i][_qp] * offjac;//-sign creat bad jac
+  return _test[_i][_qp] * offjac;
   
   }
 
