@@ -24,6 +24,7 @@ protected:
   const ADVariableValue & _coupled_variable;
  
   const ADMaterialProperty(Real) & _solubility;
+  const Real _unit_scalor;
 
   usingKernelMembers;
 

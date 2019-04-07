@@ -49,6 +49,7 @@ inactive = 'VectorPostprocessors'
     coupled_var_precipitation = 'C_p'
     solubility = solubility_solid
     variable = C_d
+    unit_scalor = '10'
   []
   [C_p_dot]
     type = TimeDerivative
@@ -59,6 +60,7 @@ inactive = 'VectorPostprocessors'
     solubility = solubility_solid
     coupled_var_dissolution = 'C_d'
     variable = C_p
+    unit_scalor = '10'
   []
   [soret]
     type = SoretDiffusion
